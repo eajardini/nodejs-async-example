@@ -3,6 +3,18 @@
 
 const axios = require('axios');
 var titulo = "";
+
+function monstraNomes() {
+    for (i=0; i<20;i++) {
+        console.log("Valor de i:", i);
+    };
+}
+
+function monstraCidade() {
+    for (i=0; i<20;i++) {
+        console.log("Valor de Cidade: cidade", i);
+    };
+}
 (async () => {
     try {
         const response = await axios.get("https://jsonplaceholder.typicode.com/posts")
@@ -14,6 +26,10 @@ var titulo = "";
         console.log("Deu erro Get: ", error.rsponse);
     }
     console.log("Valor título Get:", titulo[0]);
+
+    monstraNomes();
+    monstraCidade();
+
     console.log("*** Iniciandoi o POST ***");
 
     try {
